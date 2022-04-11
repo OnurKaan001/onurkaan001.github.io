@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Nunito:wght@200&family=Source+Code+Pro:wght@200&display=swap');
+
+body {
+    height: 100%;
+    background: url('/images/bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Nunito', sans-serif;
+}
+
+.body {
+    margin-left: 85px;
+}
+
+.header-main.active {
+    transform: translateX(0);
+}
+
+.header-main {
+    position: fixed;
+    left: 0;
+    width: 85px;
+    height: 100%;
+    text-align: center;
+    background: #121518;
+    opacity: 0.9;
+    transition: transform .4s ease;
+    z-index: 3;
+}
+
+.header-main ul {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.header-main ul li {
+    list-style: none;
+    padding: 15px;
+    font-size: 25px;
+}
+
+.header-main ul li a {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.header-main ul li a:hover {
+    color: rgb(3, 169, 235);
+    transition: 0.5s;
+}
+
+.header-main hr {
+    opacity: 1;
+}
+
+.header-main .logo {
+    width: 60px;
+    border-radius: 60px;
+}
+
+.active-icon {
+    color: rgb(3, 169, 235);
+}
+
+.toggle {
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.toggle i {
+    color: white;
+    font-size: 25px;
+    float: right;
+    margin: 15px;
+}
+
+.toggle .fa-bars.active,
+.toggle .fa-times.active {
+    display: block;
+}
+
+.home,
+.about,
+.portfolio,
+.contact {
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+}
+
+
+.home {
+    width: 100%;
+    height: 100vh;
+}
+
+.home .container {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home .container b {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 80px;
+}
+
+
+.about {
+    background: #0d0e0f;
+}
+
+.about-me-header {
+    width: 30%;
+    margin: auto;
+}
+
+.about-me-header h2 {
+    text-align: center;
+    padding: 25px;
+    border-bottom: rgb(3, 169, 235) 5px solid;
+}
+
+.about .card {
+    background: #070708;
+    margin: 50px;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.about .card:hover {
+    transform: translateY(-1%);
+    transition: .5s;
+}
+
+.about .card:not(:hover) {
+    transform: translateY(0%);
+    transition: .5s;
+}
+
+.about .card .card-logo {
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+}
+
+.about .card .name {
+    font-size: 40px;
+}
+
+.about .card .location {
+    color: rgb(3, 169, 235);
+}
+
+.about .card .card-content {
+    font-size: 20px;
+}
+
+.services {
+    padding: 50px;
+    text-align: center;
+}
+
+.services-header{
+    width: 30%;
+    margin: auto;
+}
+
+.services-header h2 {
+    text-align: center;
+    padding: 25px;
+    border-bottom: rgb(3, 169, 235) 5px solid;
+    margin: 50px;
+}
+
+.services .cards {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.services .cards .service-card {
+    background: #070708;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 15px;
+    text-align: center;
+    width: 50%;
+}
+
+.services .cards .service-card:hover {
+    transform: translateY(-1%);
+    transition: .5s;
+}
+
+.services .cards .service-card:not(:hover) {
+    transform: translateY(0%);
+    transition: .5s;
+}
+
+.services .cards .card-icon {
+    margin: 15px;
+}
+
+.services .cards .card-icon span i {
+    padding: 25px;
+    border-radius: 100%;
+    background: #0e0f10;
+    border: rgb(3, 169, 235) 1px solid;
+    color: rgb(3, 169, 235);
+    font-size: 25px;
+    line-height: auto;
+}
+
+@media screen and (max-width:800px) {
+
+    .body {
+        margin: 0;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .toggle .fa-bars,
+    .toggle .fa-times {
+        display: none;
+    }
+
+    .header-main {
+        transform: translateX(-100%);
+    }
+
+    .about-me-header {
+        width: 50%;
+        margin: auto;
+    }
+    
+    .about-me-header h2 {
+        text-align: center;
+        padding: 25px;
+        border-bottom: rgb(3, 169, 235) 5px solid;
+    }
+
+    .about .card {
+        text-align: center;
+        margin: 0;
+    }
+
+    .about .card .card-logo  {
+        text-align: center;
+    }
+
+    .services {
+        padding: 0;
+        text-align: center;
+    }
+    
+    .services-header{
+        width: 75%;
+        margin: auto;
+    }
+    
+    .services-header h2 {
+        text-align: center;
+        padding: 25px;
+        border-bottom: rgb(3, 169, 235) 5px solid;
+        margin: 50px;
+    }
+    
+    .services .cards {
+        display: block;
+        text-align: center;
+    }
+
+    .services .cards .service-card {
+        background: #070708;
+        border-radius: 10px;
+        text-align: center;
+        width: 92%;
+    }
+    
+
+
+}
