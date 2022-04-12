@@ -54,6 +54,11 @@ body {
     transition: 0.5s;
 }
 
+.header-main ul li a:not(:hover) {
+    color: white;
+    transition: 0.5s;
+}
+
 .header-main hr {
     opacity: 1;
 }
@@ -174,7 +179,7 @@ body {
     text-align: center;
 }
 
-.services-header{
+.services-header {
     width: 30%;
     margin: auto;
 }
@@ -225,7 +230,102 @@ body {
     line-height: auto;
 }
 
-@media screen and (max-width:800px) {
+.portfolio {
+    background: #0d0e0f;
+}
+
+.portfolio .portfolio-header {
+    width: 30%;
+    margin: auto;
+}
+
+.portfolio .portfolio-header h2 {
+    text-align: center;
+    padding: 25px;
+    border-bottom: rgb(3, 169, 235) 5px solid;
+}
+
+.portfolio .portfolio-container .popup-images {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.portfolio .portfolio-container .popup-images .image-box {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+}
+
+.portfolio .portfolio-container .popup-images .image-box img {
+    max-width: 350px;
+}
+
+.portfolio .portfolio-container .popup-images .image-box img:hover {
+    opacity: 1;
+}
+
+.portfolio .portfolio-container .popup-images .image-box .image .image-overlay {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: .5s ease;
+    background: rgb(3, 169, 235);
+    cursor: pointer;
+}
+
+.portfolio .portfolio-container .popup-images .image-box:hover .image-overlay {
+    opacity: .8;
+}
+
+.portfolio .portfolio-container .popup-images .image-box .image .image-overlay .text {
+    opacity: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.portfolio .portfolio-container .popup-images .popup-image-div {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 85px;
+    width: calc(100% - 85px);
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.portfolio .portfolio-container .popup-images .popup-image-div img {
+    position: absolute;
+    max-width: 850px;
+    max-height: 98vh;
+    transition: .5s;
+}
+
+.portfolio .portfolio-container .popup-images .popup-image-div .fa-times {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
 
     .body {
         margin: 0;
@@ -248,7 +348,7 @@ body {
         width: 50%;
         margin: auto;
     }
-    
+
     .about-me-header h2 {
         text-align: center;
         padding: 25px;
@@ -260,7 +360,7 @@ body {
         margin: 0;
     }
 
-    .about .card .card-logo  {
+    .about .card .card-logo {
         text-align: center;
     }
 
@@ -268,19 +368,19 @@ body {
         padding: 0;
         text-align: center;
     }
-    
-    .services-header{
+
+    .services-header {
         width: 75%;
         margin: auto;
     }
-    
+
     .services-header h2 {
         text-align: center;
         padding: 25px;
         border-bottom: rgb(3, 169, 235) 5px solid;
         margin: 50px;
     }
-    
+
     .services .cards {
         display: block;
         text-align: center;
@@ -292,7 +392,37 @@ body {
         text-align: center;
         width: 92%;
     }
-    
 
+    .portfolio .container .popup-image img {
+        width: 95%;
+    }
+
+    .portfolio .portfolio-header {
+        width: 75%;
+        margin: auto;
+    }
+
+    .portfolio .portfolio-header h2 {
+        text-align: center;
+        padding: 25px;
+        border-bottom: rgb(3, 169, 235) 5px solid;
+        margin: 50px;
+    }
+
+    .portfolio .portfolio-container .popup-images .image-box img {
+        max-width: 95%;
+    }    
+
+    .portfolio .portfolio-container .popup-images .popup-image-div {
+        width: 100%;
+        left: 0;        
+    }
+
+    .portfolio .portfolio-container .popup-images .popup-image-div img {
+        position: absolute;
+        max-width: 95%;
+        max-height: 98vh;
+        transition: .5s;
+    }    
 
 }

@@ -20,3 +20,22 @@ var typed = new Typed(".auto-type", {
     backSpeed: 85,
     loop: true
 })
+
+function popup(src) {
+    const popupImage = document.getElementById('popup-image');
+    const popupImageDiv = document.getElementById('popup-image-div');
+    if (!popupImage.src) {
+        popupImage.src = src
+        popupImageDiv.style.display = "flex"
+    } else {
+        popupImage.removeAttribute('src');
+        popupImageDiv.style.display = "none";
+    }
+}
+
+function closePopup() {
+    const popupImage = document.getElementById('popup-image');
+    const popupImageDiv = document.getElementById('popup-image-div');
+    popupImage.removeAttribute('src');
+    popupImageDiv.style.display = "none";
+}
