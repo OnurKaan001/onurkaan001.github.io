@@ -325,6 +325,72 @@ body {
     cursor: pointer;
 }
 
+.contact {
+    background: #0d0e0f;
+}
+
+
+.contact-header {
+    width: 30%;
+    margin: auto;
+}
+
+.contact-header h2 {
+    text-align: center;
+    padding: 25px;
+    border-bottom: rgb(3, 169, 235) 5px solid;
+    margin-bottom: 50px;
+}
+
+.contact .contact-cards {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.contact .contact-cards .contact-card {
+    background: #070708;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.contact .contact-cards .contact-card:hover {
+    transform: translateY(-1%);
+    transition: .5s;
+}
+
+.contact .contact-cards .contact-card:not(:hover) {
+    transform: translateY(0);
+    transition: .5s;
+}
+
+.contact .contact-cards .contact-card .card-icon span i{
+    padding: 25px;
+    border-radius: 100%;
+    background: #0e0f10;
+    border: rgb(3, 169, 235) 1px solid;
+    color: rgb(3, 169, 235);
+    font-size: 25px;
+    line-height: auto;
+}
+
+.contact .contact-cards .contact-card .card-title{
+    font-weight: bold;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.contact .contact-cards .contact-card .card-content {
+    font-size: 17px;
+}
+
+.contact .contact-cards .contact-card .card-content a {
+    color: white;
+}
+
 @media screen and (max-width:768px) {
 
     .body {
@@ -411,11 +477,11 @@ body {
 
     .portfolio .portfolio-container .popup-images .image-box img {
         max-width: 95%;
-    }    
+    }
 
     .portfolio .portfolio-container .popup-images .popup-image-div {
         width: 100%;
-        left: 0;        
+        left: 0;
     }
 
     .portfolio .portfolio-container .popup-images .popup-image-div img {
@@ -423,6 +489,18 @@ body {
         max-width: 95%;
         max-height: 98vh;
         transition: .5s;
-    }    
+    }
+
+    .contact-header {
+        width: 50%;
+        margin: auto;
+    }
+
+    .contact-header h2 {
+        text-align: center;
+        padding: 25px;
+        border-bottom: rgb(3, 169, 235) 5px solid;
+        margin-bottom: 50px;
+    }
 
 }
